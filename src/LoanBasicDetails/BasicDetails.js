@@ -198,7 +198,7 @@ export class BasicDetails extends LocalizeMixin(LitElement) {
         <lion-button class="btn-previous btn" @click=${this._toDashboard}
           >${localize.msg('change-language:btnPrev')}</lion-button
         >
-        <lion-button @click=${this._captureDetails} class="btn-next btn"
+        <lion-button @click=${this._captureDetails} id="lion-submit-btn" class="btn-next btn"
           >${localize.msg('change-language:btnNext')}</lion-button
         >
       </div>
@@ -246,7 +246,7 @@ export class BasicDetails extends LocalizeMixin(LitElement) {
         this.emiCalc = data;
         localStorage.setItem('emi', JSON.stringify(data));
         Router.go('/emidetails');
-        // console.log(data);
+        console.log(data);
       });
   }
 

@@ -3,5 +3,8 @@ import { stub } from 'sinon';
 import '../src/Customer/Customer-details.js';
 
 describe('customer details', () => {
-  // Write test cases inside this block
+  it('loads the header fine', async ()=> {
+    const el = await fixture(html`<customer-details></customer-details>`);
+    expect(el).to.be.accessible();
+  });
 });
